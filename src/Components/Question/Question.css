@@ -1,0 +1,10 @@
+.label-text {
+  color: hsl(var(--ac));
+  font-size: 1.25rem;
+}
+.toast:where(.toast-top) {
+  top: 8rem;
+}
+.radio {
+  border-color: hsl(var(--ac));
+}
