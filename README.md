@@ -1,5 +1,9 @@
 Project Name:
 Quick-Quiz
+
+Live Site:
+https://fahim-faisal-assignment-9-phero.netlify.app/
+
 Project Description:
 
 • This project was build with React-js library
