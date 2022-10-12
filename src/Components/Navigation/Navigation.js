@@ -77,7 +77,7 @@ const Navigation = () => {
             </Dropdown.Menu>
           </Dropdown>
           <Link to={"/"} className="btn btn-ghost normal-case text-xl">
-            <img src={quiz} className="w-8 mr-2 fill-red-500" alt="" />
+            <img src={quiz} className="w-8 mr-2 " alt="" />
             Q-Quiz
           </Link>
         </Navbar.Start>
