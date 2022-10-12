@@ -42,7 +42,7 @@ const Blog = () => {
         class="collapse collapse-arrow border border-primary bg-neutral rounded-box md:w-8/12"
       >
         <div class="collapse-title text-2xl font-medium">
-          Q1.What is useRef in React?
+          ♦ What is useRef in React?
         </div>
         <div class="collapse-content font-semibold">
           <p class="text-2xl">useRef:</p>
