@@ -57,7 +57,7 @@ const Navigation = () => {
               </Dropdown.Item>
               <li tabIndex={0}>
                 <Link className="justify-between">
-                  Mode
+                  Light Mode
                   <svg
                     className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,9 @@ const Navigation = () => {
                 </Link>
                 <ul className="p-2 bg-base-100">
                   <li>
-                    <a>Submenu 1</a>
+                    <a>
+                      <Toggle value={theme} onClick={changeTheme} />
+                    </a>
                   </li>
                 </ul>
               </li>
