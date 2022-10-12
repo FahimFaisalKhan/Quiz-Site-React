@@ -20,10 +20,10 @@ const Statistics = () => {
   console.log(info);
   return (
     <div className="container mx-auto flex justify-center">
-      <ResponsiveContainer width="100%" height={500}>
+      <ResponsiveContainer width="100%" height={500} className="text-info">
         <BarChart data={info} className="bg-base-100 ">
-          <XAxis dataKey="name" stroke="rgb(241 245 249)" />
-          <YAxis stroke="rgb(241 245 249)" />
+          <XAxis dataKey="name" stroke="rgb(99 102 241)" />
+          <YAxis stroke="rgb(99 102 241)" />
           <Tooltip />
           <Legend
             width={100}

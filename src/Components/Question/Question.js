@@ -12,10 +12,10 @@ const Question = ({ questionData, serial, verifyAnswer }) => {
   const parsedQuestion = parse(question).innerText;
 
   return (
-    <div className=" bg-slate-400 mb-32 text-base-100 py-8 px-2 sm:p-12 rounded-lg ">
+    <div className=" bg-base-content mb-32 text-base-100 py-8 px-2 sm:p-12 rounded-lg ">
       <div className="flex flex-col-reverse  sm:flex-row mb-8 justify-between">
         <h1 className="text-xl font-medium ">
-          Quiz : {serial} {parsedQuestion}
+          Quiz {serial}: {parsedQuestion}
         </h1>
         <div
           className="cursor-pointer self-end sm:self-auto"

@@ -69,7 +69,7 @@ const Heading = () => {
       <h1 className="text-center font-serif text-4xl px-5 sm:text-7xl">
         Welcome To Quick-Quiz!
       </h1>
-      <p className="text-justify  mt-7 sm:mb-10 text-base text-slate-300 px-6 sm:px-36 sm:text-lg">
+      <p className="text-justify  mt-7 sm:mb-10 text-base text-base-content px-6 sm:px-36 sm:text-lg">
         Hey There! If you are an intermidiate web-developer and you are not sure
         that you are on the right track or not , If wanna check how much you can
         memorize of what you have learned and or find out what is yet to learn
@@ -78,21 +78,21 @@ const Heading = () => {
       </p>
       <div className="flex justify-between items-center flex-col-reverse md:flex-row sm:mt-16 ">
         <div className="w-full p-12 flex flex-col gap-5 justify-center ">
-          <div className="bg-slate-400 p-6 rounded-lg text-base-100">
+          <div className="bg-base-content p-6 rounded-lg text-base-100">
             <h1 className="text-2xl">
               <span className="text-5xl">36</span> Questions
             </h1>
           </div>
-          <div className="bg-slate-400 p-6 rounded-lg text-base-100">
+          <div className="bg-base-content p-6 rounded-lg text-base-100">
             <h1 className="text-2xl">
               <span className="text-5xl">4</span> Topics
             </h1>
           </div>
-          <div className="bg-slate-400 p-6 rounded-lg text-base-100">
+          <div className="bg-base-content p-6 rounded-lg text-base-100">
             <h2 className="text-2xl mb-2">See stats</h2>
             <FontAwesomeIcon className="text-5xl" icon={faChartBar} />
           </div>
-          <p className="bg-slate-400 p-6 rounded-lg text-base-100 text-xl">
+          <p className="bg-base-content p-6 rounded-lg text-base-100 text-xl">
             Measure how far you are along the way of Web Development!
           </p>
         </div>

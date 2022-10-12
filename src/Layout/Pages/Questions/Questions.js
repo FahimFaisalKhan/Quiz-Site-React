@@ -39,7 +39,7 @@ const Questions = () => {
           ></Question>
         ))}
       </div>
-      <Card className="h-3/6 bg-slate-400 text-base-100">
+      <Card className="h-3/6 bg-base-content text-base-100">
         <h1 className="text-center mt-2 text-3xl font-semibold">{name}</h1>
         <Card.Image src={logo} alt="Shoes" />
         <Card.Body className="items-center text-center">

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Navbar, Dropdown, Button, Menu, Input } from "react-daisyui";
+import React, { useEffect, useState } from "react";
+import { Navbar, Dropdown, Button, Menu, Input, Toggle } from "react-daisyui";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +7,22 @@ import "./Navigation.css";
 import quiz from "../../Static/Icon/quiz.svg";
 const Navigation = () => {
   const [searchField, setSearchField] = useState(false);
+  const [theme, setTheme] = useState(false);
+
+  const changeTheme = () => {
+    setTheme(!theme);
+  };
+  useEffect(() => {
+    if (theme === false) {
+      document
+        .getElementsByTagName("html")[0]
+        .setAttribute("data-theme", "dark");
+    } else {
+      document
+        .getElementsByTagName("html")[0]
+        .setAttribute("data-theme", "light");
+    }
+  }, [theme]);
   return (
     <div className="pb-20 flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
       <Navbar className="container mx-auto border-b-4 border-slate-400 text-accent-content  grid grid-rows-1 sm:flex">
@@ -61,7 +77,8 @@ const Navigation = () => {
             </Dropdown.Menu>
           </Dropdown>
           <Link to={"/"} className="btn btn-ghost normal-case text-xl">
-            <img src={quiz} className="w-8 mr-2" alt="" /> Q-Quiz
+            <img src={quiz} className="w-8 mr-2 fill-red-500" alt="" />
+            Q-Quiz
           </Link>
         </Navbar.Start>
         <Navbar.Center className="hidden lg:flex">
@@ -87,7 +104,7 @@ const Navigation = () => {
               tabIndex={0}
             >
               <Link className="active:bg-accent-focus">
-                Mode
+                Light Mode
                 <svg
                   className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +117,9 @@ const Navigation = () => {
               </Link>
               <Menu className="p-2 bg-base-100">
                 <Menu.Item>
-                  <Link>Submenu 1</Link>
+                  <a>
+                    <Toggle value={theme} onClick={changeTheme} />
+                  </a>
                 </Menu.Item>
               </Menu>
             </Menu.Item>

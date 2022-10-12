@@ -18,7 +18,7 @@ const Topic = ({ topic }) => {
           <p className="text-xl">Total Questions: {total}</p>
           <Card.Actions className="justify-start">
             <Link to={`/${id}`}>
-              <Button className="text-accent-content capitalize text-base mt-4 py-4 h-auto ">
+              <Button className="text-base-content capitalize text-base mt-4 py-4 h-auto bg-base-300 ">
                 Start Practice
                 <FontAwesomeIcon className="ml-2" icon={faArrowRight} />
               </Button>
