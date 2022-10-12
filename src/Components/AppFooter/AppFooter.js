@@ -4,7 +4,7 @@ import quiz from "../../Static/Icon/quiz.svg";
 const AppFooter = () => {
   return (
     <div>
-      <Footer className="p-10 bg-base-300 text-base-content">
+      <Footer className="p-10 bg-base-300 text-base-content justify-between">
         <div>
           <img src={quiz} className="w-24" alt="" />
           <p>
