@@ -4,7 +4,7 @@ import { faChartBar } from "@fortawesome/free-solid-svg-icons";
 const Heading = () => {
   return (
     <section className="mx-auto container text-accent-content">
-      <h1 className="text-center font-serif text-5xl px-5 sm:text-7xl">
+      <h1 className="text-center font-serif text-4xl px-5 sm:text-7xl">
         Welcome To Quick-Quiz!
       </h1>
       <p className="text-justify  mt-7 mb-10 text-lg text-slate-300 px-6 sm:px-36">
