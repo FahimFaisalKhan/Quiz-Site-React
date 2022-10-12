@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "./Navigation.css";
+import quiz from "../../Static/Icon/quiz.svg";
 const Navigation = () => {
   const [searchField, setSearchField] = useState(false);
   return (
@@ -60,7 +61,7 @@ const Navigation = () => {
             </Dropdown.Menu>
           </Dropdown>
           <Link to={"/"} className="btn btn-ghost normal-case text-xl">
-            Q-Quiz
+            <img src={quiz} className="w-8 mr-2" alt="" /> Q-Quiz
           </Link>
         </Navbar.Start>
         <Navbar.Center className="hidden lg:flex">
