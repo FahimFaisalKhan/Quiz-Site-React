@@ -1,12 +1,15 @@
-import React from "react";
-import { Navbar, Dropdown, Button, Menu } from "react-daisyui";
+import React, { useState } from "react";
+import { Navbar, Dropdown, Button, Menu, Input } from "react-daisyui";
 import { Link } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import "./Navigation.css";
 const Navigation = () => {
+  const [searchField, setSearchField] = useState(false);
   return (
     <div className="pb-20 flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
-      <Navbar className="container mx-auto border-b-4 border-slate-400 text-accent-content ">
-        <Navbar.Start>
+      <Navbar className="container mx-auto border-b-4 border-slate-400 text-accent-content  grid grid-rows-1 sm:flex">
+        <Navbar.Start className="w-full justify-between sm:justify-start sm:w-auto">
           <Dropdown>
             <Button color="ghost" tabIndex={0} className="lg:hidden">
               <svg
@@ -25,10 +28,19 @@ const Navigation = () => {
               </svg>
             </Button>
             <Dropdown.Menu tabIndex={0} className="w-52 menu-compact mt-3">
-              <Dropdown.Item>Item 1</Dropdown.Item>
+              <Dropdown.Item>
+                <Link to={"/"}>Topics</Link>
+              </Dropdown.Item>
+
+              <Dropdown.Item>
+                <Link to={"/statistics"}>Statistics</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link to={"/blog"}>Blog</Link>
+              </Dropdown.Item>
               <li tabIndex={0}>
-                <a className="justify-between">
-                  Parent
+                <Link className="justify-between">
+                  Mode
                   <svg
                     className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -38,20 +50,18 @@ const Navigation = () => {
                   >
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                   </svg>
-                </a>
+                </Link>
                 <ul className="p-2 bg-base-100">
                   <li>
                     <a>Submenu 1</a>
                   </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
                 </ul>
               </li>
-              <Dropdown.Item>Item 3</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <Link to={"/"} className="btn btn-ghost normal-case text-xl">
+            Q-Quiz
+          </Link>
         </Navbar.Start>
         <Navbar.Center className="hidden lg:flex">
           <Menu horizontal className="p-0">
@@ -75,7 +85,7 @@ const Navigation = () => {
               className="hover:bg-accent-focus rounded-lg"
               tabIndex={0}
             >
-              <a className="active:bg-accent-focus">
+              <Link className="active:bg-accent-focus">
                 Mode
                 <svg
                   className="fill-current"
@@ -86,17 +96,27 @@ const Navigation = () => {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </a>
+              </Link>
               <Menu className="p-2 bg-base-100">
                 <Menu.Item>
-                  <a>Submenu 1</a>
+                  <Link>Submenu 1</Link>
                 </Menu.Item>
               </Menu>
             </Menu.Item>
           </Menu>
         </Navbar.Center>
-        <Navbar.End>
-          <Button>Get started</Button>
+        <Navbar.End className="w-full">
+          <Input
+            placeholder="Search"
+            className={`${
+              searchField ? "inline-block" : "hidden"
+            } mr-2 search-field`}
+          />
+          <FontAwesomeIcon
+            className="text-xl hover:bg-slate-300 hover:text-base-100 p-4 rounded-full duration-500 cursor-pointer"
+            icon={faMagnifyingGlass}
+            onClick={() => setSearchField(!searchField)}
+          ></FontAwesomeIcon>
         </Navbar.End>
       </Navbar>
     </div>

@@ -1,0 +1,10 @@
+@media screen and (min-width: 1024px) {
+  .lg\:card-side {
+    flex-direction: column;
+  }
+  @media (min-width: 1280px) {
+    .xl\:card-side {
+      flex-direction: row;
+    }
+  }
+}

@@ -10,15 +10,15 @@ const Topic = ({ topic }) => {
     <div>
       <Card
         side="lg"
-        className="py-5 justify-between bg-gray-800 shadow-2xl shadow-gray-600"
+        className="py-5 justify-between bg-gray-800 shadow-2xl shadow-gray-600 lg:card-compact xl:card-side"
       >
-        <Card.Image className="w-6/12" src={logo} alt="Shoes" />
+        <Card.Image className="w-6/12 " src={logo} alt="Shoes" />
         <Card.Body>
           <Card.Title tag="h2">{name}</Card.Title>
           <p className="text-xl">Total Questions: {total}</p>
           <Card.Actions className="justify-start">
             <Link to={`/${id}`}>
-              <Button className="text-accent-content capitalize text-base mt-4">
+              <Button className="text-accent-content capitalize text-base mt-4 py-4 h-auto ">
                 Start Practice
                 <FontAwesomeIcon className="ml-2" icon={faArrowRight} />
               </Button>

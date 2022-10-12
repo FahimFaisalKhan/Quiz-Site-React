@@ -12,11 +12,16 @@ import Statistics from "./Layout/Pages/Statistics/Statistics";
 import Topics from "./Layout/Pages/Topics/Topics";
 import Blog from "./Layout/Pages/Blog/Blog";
 import Questions from "./Layout/Pages/Questions/Questions";
+import ErrorPage from "./Layout/Pages/ErrorPage/ErrorPage";
 
 // You can do this:
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout></Layout>}>
+    <Route
+      path="/"
+      element={<Layout></Layout>}
+      errorElement={<ErrorPage></ErrorPage>}
+    >
       <Route
         path="/"
         element={<Topics />}
