@@ -50,9 +50,9 @@ const Blog = () => {
             useRef is a hook which returns an object with a current property set
             to the value passed to the hook.This object is mutable so the
             current property can be changed. Importantly this object exists
-            outside of React’s render cycle, so the value persists throughout a
+            outside of React`s render cycle, so the value persists throughout a
             components lifecycle. It also provides a way for developers to
-            interact directly with DOM nodes, outside of React’s management of
+            interact directly with DOM nodes, outside of React`s management of
             the Virtual DOM. React describes this an <i>escape hatch</i>.
           </p>
         </div>
