@@ -3,7 +3,7 @@
   font-size: 1.25rem;
 }
 .toast:where(.toast-top) {
-  top: 8rem;
+  top: 4.6rem;
 }
 .radio {
   border-color: hsl(var(--ac));
