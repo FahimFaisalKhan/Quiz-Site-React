@@ -9,7 +9,7 @@ const Questions = () => {
   const { logo, total, name } = data.data;
 
   const questions = data.data.questions;
-  console.log(questions);
+
   const verifyAnswer = (selectedAnswer, correctAnswer, setToast, id) => {
     if (selectedAnswer === correctAnswer) {
       setToast({ text: "Good Job!! Correct Answer.", status: "success" });
@@ -23,7 +23,7 @@ const Questions = () => {
       setToast("");
     }, 3000);
   };
-  console.log(scores);
+
   return (
     <div className="container mx-auto flex flex-col xl:flex-row gap-12">
       <div>
@@ -32,6 +32,7 @@ const Questions = () => {
         </h1>
         {questions.map((q, index) => (
           <Question
+            key={q.id}
             questionData={q}
             serial={index + 1}
             verifyAnswer={verifyAnswer}

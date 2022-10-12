@@ -10,7 +10,7 @@ const Question = ({ questionData, serial, verifyAnswer }) => {
   const { options, question, id, correctAnswer } = questionData;
 
   const parsedQuestion = parse(question).innerText;
-  console.log(parsedQuestion);
+
   return (
     <div className=" bg-slate-400 mb-32 text-base-100 py-8 px-2 sm:p-12 rounded-lg ">
       <div className="flex flex-col-reverse  sm:flex-row mb-8 justify-between">
@@ -37,9 +37,9 @@ const Question = ({ questionData, serial, verifyAnswer }) => {
 
       <div className="mt-4">
         <Form className=" grid grid-cols-1 sm:grid-cols-2 gap-4 ">
-          {options.map((option) => {
+          {options.map((option, index) => {
             return (
-              <div>
+              <div key={index}>
                 <Form.Label
                   className="p-8 bg-base-100 rounded-lg"
                   title={option}
