@@ -2,7 +2,7 @@ Project Name:
 Quick-Quiz
 
 Live Site:
-https://fahim-faisal-assignment-9-phero.netlify.app/
+https://quick-quiz-tailwind.netlify.app/
 
 Project Description:
 
